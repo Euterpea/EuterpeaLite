@@ -1,0 +1,47 @@
+name:           EuterpeaLite
+version:        0.0.1
+x-revision: 1
+Cabal-Version:  >= 1.8
+license:        BSD3
+license-file:	License
+copyright:      Copyright (c) 2008-2017 Euterpea authors
+category:       Sound, Music
+stability:      experimental
+build-type:     Simple
+author:         Paul Hudak <paul.hudak@yale.edu>,
+                Eric Cheng <eric.cheng@aya.yale.edu>,
+                Hai (Paul) Liu <hai.liu@aya.yale.edu>,
+                Donya Quick <donyaquick@gmail.com>,
+                Dan Winograd-Cort <dwincort@gmail.com >
+maintainer:     Donya Quick <donyaquick@gmail.com>
+bug-reports:    https://github.com/Euterpea/EuterpeaLite/issues
+homepage:       http://www.euterpea.com
+synopsis:       Library for computer music research and education
+description:
+        EuterpeaLite is only the MIDI back-end of Euterpea with MIDI file export capabilities. It has minmial dependencies as a result.
+extra-source-files:
+        ReadMe.txt
+
+Library
+  hs-source-dirs: .
+  ghc-options: -O2 -funbox-strict-fields -fexcess-precision
+  extensions: CPP
+  exposed-modules:
+        EuterpeaLite,
+        EuterpeaLite.Music,
+        EuterpeaLite.IO.MIDI.MEvent,
+        EuterpeaLite.IO.MIDI.FromMidi,
+        EuterpeaLite.IO.MIDI.FromMidi2,
+        EuterpeaLite.IO.MIDI.GeneralMidi,
+        EuterpeaLite.IO.MIDI.ToMidi,
+        EuterpeaLite.IO.MIDI.ToMidi2,
+        EuterpeaLite.IO.MIDI.ExportMidiFile,
+        EuterpeaLite.IO.MIDI
+  other-modules:
+  build-depends:
+        base >= 4 && < 5,
+        HCodecs == 0.5.1,
+        heap >= 1.0 && < 2.0,
+        ghc-prim,
+        bytestring>=0.10.4.0 && <= 0.10.9
+		
