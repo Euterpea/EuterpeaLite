@@ -40,8 +40,8 @@ Library
   other-modules:
   build-depends:
         base >= 4 && < 5,
-        HCodecs == 0.5.1,
+        HCodecs >= 0.5.1 && < 0.6,
         heap >= 1.0 && < 2.0,
         ghc-prim,
-        bytestring>=0.10.4.0 && <= 0.10.9
+        bytestring >= 0.10.4.0 && < 0.13
 		
